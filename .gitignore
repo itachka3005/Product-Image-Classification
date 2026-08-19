@@ -11,15 +11,28 @@ __pycache__/
 # gradio
 .gradio/
 
-# датасеты и модели — обычно слишком большие для git
+# датасеты — слишком большие для обычного git
 dataset/
 dataset_prepared/
+
+# модель ViT (папка с весами, ~300+ МБ) — не коммитим по умолчанию
+# если хочешь закоммитить, раскомментируй и настрой Git LFS
+models/vit-product-classifier/
+
+# старый формат модели (ResNet18), если остался
 models/*.pth
 
-# логи/дебаг
+# checkpoints от transformers.Trainer (промежуточные, не нужны)
+checkpoints/
+
+# логи / debug-дампы
 logs/
 output/debug_*
 output/*.png
+output/*.html
+
+# скачанные архивы модели
+*.zip
 
 # ide
 .vscode/

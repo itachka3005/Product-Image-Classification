@@ -1,39 +1,39 @@
+"""
+Инференс через дообученный google/vit-base-patch16-224-in21k.
+"""
+
 import sys
-import torch
-import torch.nn.functional as F
 from pathlib import Path
+
+import torch
 from PIL import Image
-from torchvision import models, transforms
+from transformers import ViTForImageClassification, ViTImageProcessor
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_PATH = BASE_DIR / "models" / "best_model.pth"
+MODEL_DIR = BASE_DIR / "models" / "vit-product-classifier"
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-transform = transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-])
 
 def predict(img_path: str):
-    checkpoint = torch.load(MODEL_PATH, map_location=DEVICE)
-    class_names = checkpoint["class_names"]
+    if not MODEL_DIR.exists():
+        print(f"Ошибка: папка модели {MODEL_DIR} не найдена. Сначала запусти train.py!")
+        return
 
-    model = models.resnet18()
-    model.fc = torch.nn.Linear(model.fc.in_features, len(class_names))
-    model.load_state_dict(checkpoint["model_state_dict"])
-    model.to(DEVICE).eval()
+    processor = ViTImageProcessor.from_pretrained(str(MODEL_DIR))
+    model = ViTForImageClassification.from_pretrained(str(MODEL_DIR)).to(DEVICE).eval()
 
     image = Image.open(img_path).convert("RGB")
-    tensor = transform(image).unsqueeze(0).to(DEVICE)
+    inputs = processor(images=image, return_tensors="pt").to(DEVICE)
 
     with torch.no_grad():
-        outputs = model(tensor)
-        probs = F.softmax(outputs, dim=1)[0]
+        outputs = model(**inputs)
+        probs = torch.softmax(outputs.logits, dim=1)[0]
         top_prob, top_class_idx = torch.max(probs, 0)
 
+    class_name = model.config.id2label[top_class_idx.item()]
     print(f"\nИзображение: {img_path}")
-    print(f"Предсказание: {class_names[top_class_idx]} ({top_prob.item() * 100:.2f}%)")
+    print(f"Предсказание: {class_name} ({top_prob.item() * 100:.2f}%)")
+
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
