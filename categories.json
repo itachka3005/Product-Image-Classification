@@ -1,0 +1,27 @@
+{
+  "smartphone": {
+    "asaxiy": "https://asaxiy.uz/product/telefony-i-gadzhety/telefony/smartfony",
+    "texnomart": "https://texnomart.uz/ru/katalog/smartfony/",
+    "olcha": "https://olcha.uz/ru/category/telefony-gadzhety-aksessuary/telefony"
+  },
+  "laptop": {
+    "asaxiy": "https://asaxiy.uz/product/kompyutery-i-orgtehnika/noutbuki/noutbuki-2",
+    "texnomart": "https://texnomart.uz/ru/katalog/noutbuki/",
+    "olcha": "https://olcha.uz/ru/category/noutbuki-planshety-kompyutery/noutbuki"
+  },
+  "tv": {
+    "asaxiy": "https://asaxiy.uz/product/televizory-video-i-audio/televizory",
+    "texnomart": "https://texnomart.uz/ru/katalog/televizory/",
+    "olcha": "https://olcha.uz/ru/category/televizory-audio-i-videotekhnika/televizory"
+  },
+  "refrigerator": {
+    "asaxiy": "https://asaxiy.uz/product/bytovaya-tehnika/krupnaya-tehnika-dlya-kuhni/holodilniki",
+    "texnomart": "https://texnomart.uz/ru/katalog/holodilniki/",
+    "olcha": "https://olcha.uz/ru/category/tekhnika-dlya-kukhni/krupnaya-kukhonnaya-tekhnika/kholodilniki-i-morozilnye-kamery-1"
+  },
+  "headphones": {
+    "asaxiy": "https://asaxiy.uz/product/telefony-i-gadzhety/naushniki-i-auditexniki/besprovodniye-naushniki",
+    "texnomart": "https://texnomart.uz/ru/katalog/naushniki",
+    "olcha": "https://olcha.uz/ru/category/telefony-gadzhety-aksessuary/aksessuary/garnitury"
+  }
+}

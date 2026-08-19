@@ -1,0 +1,27 @@
+{
+  "smartphone": {
+    "asaxiy": "https://asaxiy.uz/uz/category/smartfony",
+    "texnomart": "https://texnomart.uz/uz/category/smartfony",
+    "olcha": "https://olcha.uz/uz/category/smartfony"
+  },
+  "laptop": {
+    "asaxiy": "https://asaxiy.uz/uz/category/noutbuki",
+    "texnomart": "https://texnomart.uz/uz/category/noutbuki",
+    "olcha": "https://olcha.uz/uz/category/noutbuki"
+  },
+  "tv": {
+    "asaxiy": "https://asaxiy.uz/uz/category/televizory",
+    "texnomart": "https://texnomart.uz/uz/category/televizory",
+    "olcha": "https://olcha.uz/uz/category/televizory"
+  },
+  "refrigerator": {
+    "asaxiy": "https://asaxiy.uz/uz/category/holodilniki",
+    "texnomart": "https://texnomart.uz/uz/category/holodilniki",
+    "olcha": "https://olcha.uz/uz/category/holodilniki"
+  },
+  "headphones": {
+    "asaxiy": "https://asaxiy.uz/uz/category/naushniki",
+    "texnomart": "https://texnomart.uz/uz/category/naushniki",
+    "olcha": "https://olcha.uz/uz/category/naushniki"
+  }
+}

@@ -1,0 +1,30 @@
+# venv
+venv/
+.venv/
+env/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+
+# gradio
+.gradio/
+
+# датасеты и модели — обычно слишком большие для git
+dataset/
+dataset_prepared/
+models/*.pth
+
+# логи/дебаг
+logs/
+output/debug_*
+output/*.png
+
+# ide
+.vscode/
+.idea/
+
+# os
+.DS_Store
+Thumbs.db

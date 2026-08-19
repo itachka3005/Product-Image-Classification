@@ -1,0 +1,28 @@
+ 
+{
+  "smartphone": {
+    "asaxiy": "https://asaxiy.uz/product/telefony-i-gadzhety/telefony/smartfony",
+    "texnomart": "https://texnomart.uz/katalog/smartfony/",
+    "olcha": "https://olcha.uz/ru/category/telefony-gadzhety-aksessuary/telefony"
+  },
+  "laptop": {
+    "asaxiy": "https://asaxiy.uz/product/kompyutery-i-orgtehnika/noutbuki",
+    "texnomart": "https://texnomart.uz/katalog/noutbuki/",
+    "olcha": "https://olcha.uz/ru/category/noutbuki-planshety-kompyutery/noutbuki"
+  },
+  "tv": {
+    "asaxiy": "https://asaxiy.uz/product/televizory-video-i-audio/televizory",
+    "texnomart": "https://texnomart.uz/katalog/televizory/",
+    "olcha": "https://olcha.uz/ru/category/televizory-audio-i-videotekhnika/televizory"
+  },
+  "watch": {
+    "asaxiy": "https://asaxiy.uz/product/telefony-i-gadzhety/umnye-chasy-i-braslety/umniye-chasi",
+    "texnomart": "https://texnomart.uz/katalog/smart-chasy/",
+    "olcha": "https://olcha.uz/ru/category/telefony-gadzhety-aksessuary/smart-watches"
+  },
+  "headphones": {
+    "asaxiy": "https://asaxiy.uz/product/telefony-i-gadzhety/naushniki-i-auditexniki/naushniki",
+    "texnomart": "https://texnomart.uz/katalog/naushniki/",
+    "olcha": "https://olcha.uz/ru/category/telefony-gadzhety-aksessuary/aksessuary/garnitury"
+  }
+}
